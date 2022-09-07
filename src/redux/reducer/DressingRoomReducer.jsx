@@ -64,7 +64,6 @@ const initialState = {
 const DressingRoomReducer = (state = initialState, action) => {
   switch (action.type) {
     case PICK: {
-      console.log(action);
       let newItem = { ...state.Item };
       let newSelectItem = { ...state.SelectItem };
 
