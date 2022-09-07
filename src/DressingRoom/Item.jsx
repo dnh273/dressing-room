@@ -1,18 +1,28 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 export default function Item(props) {
   const { srcData } = props;
 
-  console.log(srcData.imgSrc_jpg);
+  const dispatch = useDispatch();
 
   return (
     <>
-      <img src={require(srcData.imgSrc_jpg)} alt={srcData.imgSrc_jpg} />
+      <img src={srcData.imgSrc_jpg} alt={srcData.imgSrc_jpg} />
 
       <h4>
-        <b>{srcData.name}</b>
+        <b>{srcData.name}</b> 
       </h4>
-      <button>Thử đồ</button>
+      <button
+        onClick={() => {
+          dispatch({
+            type: "PICK",
+            srcData,
+          });
+        }}
+      >
+        Thử đồ
+      </button>
     </>
   );
 }
