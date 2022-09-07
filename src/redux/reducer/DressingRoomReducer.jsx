@@ -1,3 +1,5 @@
+import { PICK } from "../type/DressingRoomType";
+
 const initialState = {
   Item: {
     hairstyle: {
@@ -61,7 +63,7 @@ const initialState = {
 
 const DressingRoomReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "PICK": {
+    case PICK: {
       console.log(action);
       let newItem = { ...state.Item };
       let newSelectItem = { ...state.SelectItem };

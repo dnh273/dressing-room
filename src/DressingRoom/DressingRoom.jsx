@@ -47,6 +47,7 @@ export default function DressingRoom() {
               position: "absolute",
               left: propsAnim.left,
               zIndex: 10,
+              top: propsAnim.top,
               opacity: propsAnim.opacity,
               width: "300px",
               display: propsAnim.display,
